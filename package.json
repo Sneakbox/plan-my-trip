@@ -1,0 +1,17 @@
+{
+  "name": "plan-my-trip",
+  "version": "1.0.0",
+  "description": "An easy Alexa trip planner for US cities.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Finbarrs Oketunji (oketunjifinbarrs@gmail.com)",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "alexa-sdk": "^1.0.25",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
+  }
+}
