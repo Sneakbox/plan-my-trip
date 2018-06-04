@@ -1,0 +1,177 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "trip planner",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "PlanMyTrip",
+                    "slots": [
+                        {
+                            "name": "fromCity",
+                            "type": "AMAZON.US_CITY",
+                            "samples": [
+                                "from {fromCity}",
+                                "{fromCity}",
+                                "I will be traveling from {fromCity}"
+                            ]
+                        },
+                        {
+                            "name": "toCity",
+                            "type": "AMAZON.US_CITY",
+                            "samples": [
+                                "I wish to visit {toCity}",
+                                "{toCity}",
+                                "to {toCity}"
+                            ]
+                        },
+                        {
+                            "name": "travelDate",
+                            "type": "AMAZON.DATE",
+                            "samples": [
+                                "{travelDate}",
+                                "I will be travelling on {travelDate}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "Help me plan my trip",
+                        "plan my trip",
+                        "I wish to visit {toCity} from {fromCity} on {travelDate}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.PauseIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ResumeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.MoreIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateSettingsIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NextIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PageUpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PageDownIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PreviousIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollRightIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollDownIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollLeftIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollUpIntent",
+                    "samples": []
+                }
+            ],
+            "types": []
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "PlanMyTrip",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "fromCity",
+                            "type": "AMAZON.US_CITY",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Intent-PlanMyTrip.IntentSlot-fromCity"
+                            }
+                        },
+                        {
+                            "name": "toCity",
+                            "type": "AMAZON.US_CITY",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Intent-PlanMyTrip.IntentSlot-toCity"
+                            }
+                        },
+                        {
+                            "name": "travelDate",
+                            "type": "AMAZON.DATE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Intent-PlanMyTrip.IntentSlot-travelDate"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Intent-PlanMyTrip.IntentSlot-fromCity",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "From where will you be travelling ?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Intent-PlanMyTrip.IntentSlot-toCity",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Where do you wish to travel ?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Intent-PlanMyTrip.IntentSlot-travelDate",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "When will you be traveling ?"
+                    }
+                ]
+            }
+        ]
+    }
+}
